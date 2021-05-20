@@ -23,5 +23,4 @@ let skills = `
 
     //Fin de las variables, a partir de aca es codigo de verdad
 
-console.log(welcome);
-
+var userInp = window.prompt(welcome);
