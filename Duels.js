@@ -2,25 +2,60 @@
 
 //El menu principal
 let welcome = `Bienvenido a DUELS!
-1 Como jugar
-2 Guerrero
-3 Picaro
-4 Paladin
-5 Caballero de la Muerte
-6 Muñeco de entrenamiento`
+-Tutorial
+-Guerrero
+-Picaro
+-Paladin
+-Caballero de la Muerte
+-Dummy`
     
 // El 'como jugar', añadir cuando sepa bien como funciona el juego
-let howTo = `
+let tutorial = `
 Te curas y ganas
 `
 
-// skill/s, help, ayuda, habilidades y "como jugar" todas te llevan aca. Agregar todas las habilidades cuando ya tenga el codigo hecho.
+// skill/s, help, ayuda y habilidades todas te llevan aca. Agregar todas las habilidades cuando ya tenga el codigo hecho.
 let skills = `
 1 Shield
 2 Heal
 `
 
+//Si hay un error y no se puede ir al siguiente menu, te va a devolver a esta variable, la cual guarda el menu en el que estabas antes del error
+let failsafeC = welcomeC
 
-    //Fin de las variables, a partir de aca es codigo de verdad
 
-var userInp = window.prompt(welcome);
+    //Termino el verano, comienzan las clases (aca se definen las class)
+
+    
+function welcomeC (){ //Menu principal
+    let failsafeC = welcomeC
+    var userInp = window.prompt(welcome);
+    switch (userInp) {
+        case "Tutorial":
+            tutorialC
+            break;
+    
+        default:
+            errorC
+            break;
+    }
+}
+
+function tutorialC() {
+    let failsafeC = tutorialC
+    window.prompt("Tutorial success")
+}
+
+function errorC() {
+    var userInp = window.prompt(`Opcion no reconocida. Acordate de empezar las palabras con mayusculas.
+    -Ok`)
+    if (userInp = "Ok") {
+        failsafeC
+    } else {
+        errorC
+    }
+
+
+}
+
+welcomeC()
