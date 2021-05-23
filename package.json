@@ -1,0 +1,23 @@
+{
+  "name": "duelingminigame",
+  "version": "1.0.0",
+  "description": "mi juego loco",
+  "main": "index.js",
+  "dependencies": {
+    "jest": "^26.6.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Macofan/Duels.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Macofan/Duels/issues"
+  },
+  "homepage": "https://github.com/Macofan/Duels#readme"
+}

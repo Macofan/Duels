@@ -21,18 +21,18 @@ let skills = `
 `
 
 //Si hay un error y no se puede ir al siguiente menu, te va a devolver a esta variable, la cual guarda el menu en el que estabas antes del error
-let failsafeC = welcomeC
+let failsafeC = welcomeC()
 
 
     //Termino el verano, comienzan las clases (aca se definen las class)
 
     
-function welcomeC (){ //Menu principal
-    let failsafeC = welcomeC
+function welcomeC(){ //Menu principal
+    let failsafeC = welcomeC()
     var userInp = window.prompt(welcome);
     switch (userInp) {
         case "Tutorial":
-            tutorialC
+            tutorialC()
             break;
     
         default:
@@ -42,7 +42,7 @@ function welcomeC (){ //Menu principal
 }
 
 function tutorialC() {
-    let failsafeC = tutorialC
+    let failsafeC = tutorialC()
     window.prompt("Tutorial success")
 }
 
@@ -50,9 +50,9 @@ function errorC() {
     var userInp = window.prompt(`Opcion no reconocida. Acordate de empezar las palabras con mayusculas.
     -Ok`)
     if (userInp = "Ok") {
-        failsafeC
+        failsafeC()
     } else {
-        errorC
+        errorC()
     }
 
 
