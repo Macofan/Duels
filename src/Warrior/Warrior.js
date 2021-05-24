@@ -10,4 +10,5 @@ class Warrior{
         this.life -= damage
     }
 }
-export default Warrior
+
+module.exports = Warrior
