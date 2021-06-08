@@ -1,14 +1,15 @@
     //Aca se definen variables
 
 //El menu principal
-let welcome = `Bienvenido a DUELS!
+
+var welcome = `Bienvenido a DUELS!
 -Tutorial
 -Guerrero
 -Picaro
 -Paladin
 -Caballero de la Muerte
--Dummy`
-    
+-Dummy`  
+ 
 // El 'como jugar', añadir cuando sepa bien como funciona el juego
 let tutorial = `
 Te curas y ganas
@@ -21,38 +22,36 @@ let skills = `
 `
 
 //Si hay un error y no se puede ir al siguiente menu, te va a devolver a esta variable, la cual guarda el menu en el que estabas antes del error
-let failsafeC = welcomeC()
+//var failsafeC = welcomeC() //ESTO ROMPE EL PROGRAMA, HAY QUE REWORKEAR COMO FUNCIONA (probablemente con un loop que llame la funcion de error y te deje salir cuando le pongas el OK)
 
 
     //Termino el verano, comienzan las clases (aca se definen las class)
 
-    
 function welcomeC(){ //Menu principal
-    let failsafeC = welcomeC()
-    var userInp = window.prompt(welcome);
-    switch (userInp) {
+    let userInpWelcomeC = "Default"
+    userInpWelcomeC = window.prompt (welcome) //Le pide el input para decidir a que menu mandarlo
+    switch (userInpWelcomeC)  {
         case "Tutorial":
             tutorialC()
             break;
     
         default:
-            errorC
+            errorC // NO TE MANDA ACA Y NO SE POR QUE
             break;
     }
 }
 
 function tutorialC() {
-    let failsafeC = tutorialC()
     window.prompt("Tutorial success")
 }
 
 function errorC() {
-    var userInp = window.prompt(`Opcion no reconocida. Acordate de empezar las palabras con mayusculas.
+    let userInpErrorC = window.prompt(`Opcion no reconocida. Acordate de empezar las palabras con mayusculas.
     -Ok`)
-    if (userInp = "Ok") {
-        failsafeC()
+    if (userInpErrorC = "Ok") {
+        // No sumarle 1 al loop, asi termina
     } else {
-        errorC()
+        // Sumarle 1 al loop, asi te manda error de nuevo
     }
 
 
