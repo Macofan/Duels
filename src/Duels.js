@@ -22,12 +22,12 @@ let skills = `
 `
 
 //Si hay un error y no se puede ir al siguiente menu, te va a devolver a esta variable, la cual guarda el menu en el que estabas antes del error
-//var failsafeC = welcomeC() //ESTO ROMPE EL PROGRAMA, HAY QUE REWORKEAR COMO FUNCIONA (probablemente con un loop que llame la funcion de error y te deje salir cuando le pongas el OK)
-
+var failsafeC = welcomeC //Testing a ver si Dario lo arreglo
 
     //Termino el verano, comienzan las clases (aca se definen las class)
 
 function welcomeC(){ //Menu principal
+    failsafeC = welcomeC
     let userInpWelcomeC = "Default"
     userInpWelcomeC = window.prompt (welcome) //Le pide el input para decidir a que menu mandarlo
     switch (userInpWelcomeC)  {
@@ -36,25 +36,47 @@ function welcomeC(){ //Menu principal
             break;
     
         default:
-            errorC // NO TE MANDA ACA Y NO SE POR QUE
+            errorC() // NO TE MANDA ACA Y NO SE POR QUE
             break;
     }
 }
 
 function tutorialC() {
+    failsafeC = tutorialC
     window.prompt("Tutorial success")
 }
 
 function errorC() {
     let userInpErrorC = window.prompt(`Opcion no reconocida. Acordate de empezar las palabras con mayusculas.
     -Ok`)
-    if (userInpErrorC = "Ok") {
-        // No sumarle 1 al loop, asi termina
-    } else {
-        // Sumarle 1 al loop, asi te manda error de nuevo
+    switch (userInpErrorC)  {
+        case "Ok":
+            failsafeC()
+            break;
+        
+        case "ok":
+            errorCool()
+            break;
+    
+        default:
+            errorC() // NO TE MANDA ACA Y NO SE POR QUE
+            break;
     }
 
 
 }
+function errorCool() {
+    let userInpErrorCool = window.prompt(`Usted no aprende, verdad?`)
+    document.getElementById("Duels!").style.backgroundImage = "Usted no aprende verdad.png";
+    if (userInpErrorCool) {
+        "Ok"
+    } else {
+        errorC()
+    }
+}
+
+  
+
+
 
 welcomeC()
