@@ -36,7 +36,7 @@ function welcomeC(){ //Menu principal
             break;
     
         default:
-            errorC() // NO TE MANDA ACA Y NO SE POR QUE
+            errorC() 
             break;
     }
 }
@@ -59,20 +59,22 @@ function errorC() {
             break;
     
         default:
-            errorC() // NO TE MANDA ACA Y NO SE POR QUE
+            errorC() 
             break;
     }
 
 
 }
 function errorCool() {
+    let runMenu = errorC;
     let userInpErrorCool = window.prompt(`Usted no aprende, verdad?`)
-    document.getElementById("Duels!").style.backgroundImage = "Usted no aprende verdad.png";
-    if (userInpErrorCool) {
-        "Ok"
+//    document.getElementById("Duels!").style.backgroundImage = "Usted no aprende verdad.png";         //No estaria andando, no es tan importante.
+    if (userInpErrorCool = "Ok") {                                                 //El else no anda, siempre te manda a failsafeC
+        runMenu = failsafeC;
     } else {
-        errorC()
+        runMenu = errorC;
     }
+    runMenu()
 }
 
   
